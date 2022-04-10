@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" type="image/gif" href="https://www.acplanet.co.jp/lp_ssl/imgs/img_lead.gif">
+    <title>
+      パスワード認証画面
+    </title>
+  </head>
+  <body>
+    <h1>
+      パスワード認証画面
+    </h1>
+    <h3>
+      このサイトはslime教徒しか見ることができないサイトです。ですので、パスワードを入力してください。<br>
+なお、パスワードが流失した場合に備えて、同じパスワードを一定の数、ひたすら打ち続ける<br>SSS(slime教徒の根性でしか入れないシステム)を導入しています。
+    </h3>
+    <form name="f"autocomplete="off" action="#"
+      onsubmit="return false;">
+パスワードを入力<input name="pass"id = 'checkButton'><br>
+<input type="button"value="確定" onclick="slimepass()">
+    </form>
+    <script>
+      var num = 0
+function slimepass()
+{
+  if (num > 9998) {
+    window.open('https://uenofuuma.github.io/Delicious-curry-rice-recipe/')
+}
+  else{
+if(f.pass.value == "slimepower") {
+  checkButton.value = '残り'+String(10000-(num+=1))+'回入力してください';}
+else{
+alert('パスワードが違います。');
+ }
+}
+}
+      var btn = document.getElementById('checkButton');
+
+    // Enterキー押下時、送信処理が実行する
+    window.document.onkeydown = function(event){
+        if (event.key === 'Enter') {
+          if (num > 9998) {
+    window.open('https://uenofuuma.github.io/Delicious-curry-rice-recipe/')
+}
+          {
+            if(f.pass.value == "slimepower")
+              checkButton.value = '残り'+String(10000-(num+=1))+'回入力してください';
+else
+alert('パスワードが違います。');
+          }
+        }
+      }
+</script>
+    <style>
+      h1{font-size:65px;color:white;}
+      form{font-size:30px;}
+      body{font-family:serif;text-align:center;padding:20px 0;background:black;color:red;}
+    </style>
+  </body>
+</html>
